@@ -1,0 +1,25 @@
+# Ignore Python cache files in both project and app
+__pycache__/
+**/__pycache__/  # Applies to all subdirectories
+
+# Ignore logs and temp files
+*.log
+*.swp
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Django migrations (optional)
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# Ignore virtual environment (one level above `order_service/`)
+../order_env/
+
+# Ignore VSCode settings (if using VSCode)
+.vscode/
+
+# Ignore environment variables
+.env
