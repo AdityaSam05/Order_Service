@@ -16,7 +16,7 @@ from .exceptions import (
 )
 
 class CustomThrottle(UserRateThrottle):
-    rate = "10000/min"  # Allow 10000 requests per minute per user
+    rate = "100000/min"  # Allow 100000 requests per minute per user
 class OrderViewSet(viewsets.ModelViewSet):
     """Handles Orders CRUD"""
     queryset = Order.objects.all().prefetch_related("order_items", "payment", "status_history")
