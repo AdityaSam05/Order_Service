@@ -3,10 +3,10 @@ name: Publish Docker image
 on:
   push:
     paths:
-      - "order_service/**"
+      - "OrderService/order_service**"
   pull_request:
     paths:
-      - "order_service/**"
+      - "OrderService/order_service**"
   workflow_dispatch:
   
 jobs:
@@ -33,8 +33,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
-          context: order_service/
-          file: order_service/Dockerfile
+          context: OrderService/order_service/
+          file: OrderService/order_service/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
